@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>GameTrade - Gestión de Productos</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="../assets/css/Inventario.css"> <!-- Archivo CSS -->
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <h1>🎮 GameTrade</h1> <!-- Logotipo --> 
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../templates/Principal.html">Inicio</a></li> <!-- Enlace a la página principal -->
+                <li><a href="../templates/Carrito.html">Carrito</a></li> <!-- Enlace al carrito -->
+                <li><button id="logout-button" class="logout-button">Cerrar Sesión</button></li> <!-- Botón de cerrar sesión -->
+                <li><a href="../templates/Inventario.html" id="admin-link" style="display: none;">Gestionar Productos</a></li> <!-- Visible solo para vendedores -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <h2>Administrar Productos</h2>
+
+        <!-- Formulario para agregar productos -->
+        <section>
+            <form id="form-agregar-producto">
+                <label for="nombre">Nombre del Producto:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" required></textarea>
+
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" min="0" required>
+
+                <label for="stock">Stock:</label>
+                <input type="number" id="stock" name="stock" min="0" required>
+
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="software">Software</option>
+                    <option value="accesorios">Accesorios</option>
+                    <option value="consolas">Consolas</option>
+                </select>
+
+                <div>
+                    <label for="imagen">URL de la Imagen:</label>
+                    <input type="text" id="imagen" placeholder="Ingresa la URL de la imagen" required>
+                </div>
+
+                <button type="submit">Agregar Producto</button>
+            </form>
+        </section>
+
+        <!-- Listado de productos existentes -->
+        <section id="productos-existentes">
+            <h3>Productos Actuales</h3>
+            <div id="productos-lista">
+                <!-- Aquí se cargarán dinámicamente los productos existentes -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 GameTrade - Gestión de Productos</p> <!-- Derechos de autor -->
+    </footer>
+
+    <!-- Archivo JavaScript -->
+    <script src="../scripts/inventario.js"></script>
+
+    <link rel="icon" href="data:,">
+</body>
+</html>

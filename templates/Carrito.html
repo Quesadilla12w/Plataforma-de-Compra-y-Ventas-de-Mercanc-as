@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Codificación UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Diseño responsivo -->
+    <title>GameTrade - Carrito</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="../assets/css/Carrito.css"> <!-- Archivo CSS -->
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <h1>🎮 GameTrade</h1> <!-- Logotipo -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../templates/Principal.html">Inicio</a></li> <!-- Enlace a la página principal -->
+                <li><a href="../templates/Carrito.html" class="active">Carrito</a></li> <!-- Página actual -->
+                <li><button id="logout-button" class="logout-button">Cerrar Sesión</button></li> <!-- Botón para cerrar sesión -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <section id="carrito">
+            <h2>Tu Carrito de Compras</h2>
+
+            <!-- Contenedor de productos del carrito -->
+            <div id="productos-carrito" class="productos-carrito">
+                <!-- Los productos se cargarán dinámicamente con JavaScript -->
+            </div>
+
+            <!-- Resumen del carrito -->
+            <div id="resumen-carrito" class="resumen-carrito">
+                <h3>Resumen de la Compra</h3>
+                <p><strong>Total:</strong> $<span id="total-carrito">0.00</span></p>
+                <button id="finalizar-compra-btn" class="finalizar-compra-btn">Finalizar Compra</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../scripts/carrito.js" defer></script> <!-- Script de carrito -->
+</body>
+</html>
